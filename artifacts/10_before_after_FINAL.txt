@@ -1,0 +1,154 @@
+   Compiling proc-macro2 v1.0.103
+   Compiling quote v1.0.42
+   Compiling serde_core v1.0.228
+   Compiling crossbeam-utils v0.8.21
+   Compiling zerocopy v0.8.31
+   Compiling serde v1.0.228
+   Compiling autocfg v1.5.0
+   Compiling either v1.15.0
+   Compiling rayon-core v1.13.0
+   Compiling once_cell v1.21.3
+   Compiling serde_json v1.0.145
+   Compiling ryu v1.0.20
+   Compiling clap_lex v0.7.6
+   Compiling itoa v1.0.15
+   Compiling anstyle v1.0.13
+   Compiling plotters-backend v0.3.7
+   Compiling regex-syntax v0.8.8
+   Compiling ciborium-io v0.2.2
+   Compiling memchr v2.7.6
+   Compiling itertools v0.10.5
+   Compiling same-file v1.0.6
+   Compiling cast v0.3.0
+   Compiling walkdir v2.5.0
+   Compiling num-traits v0.2.19
+   Compiling plotters-svg v0.3.7
+   Compiling clap_builder v4.5.53
+   Compiling is-terminal v0.4.17
+   Compiling oorandom v11.1.5
+   Compiling anes v0.1.6
+   Compiling crossbeam-epoch v0.9.18
+   Compiling crossbeam-deque v0.8.6
+   Compiling syn v2.0.111
+   Compiling plotters v0.3.7
+   Compiling rayon v1.11.0
+   Compiling regex-automata v0.4.13
+   Compiling criterion-plot v0.5.0
+   Compiling clap v4.5.53
+   Compiling regex v1.12.2
+   Compiling zerocopy-derive v0.8.31
+   Compiling serde_derive v1.0.228
+   Compiling serial_test_derive v3.5.0
+   Compiling serial_test v3.5.0
+   Compiling broken-app v0.1.0 (/home/hogintosh/Downloads/broken-app)
+   Compiling tinytemplate v1.2.1
+   Compiling half v2.7.1
+   Compiling ciborium-ll v0.2.2
+   Compiling ciborium v0.2.2
+   Compiling criterion v0.5.1
+    Finished `bench` profile [optimized] target(s) in 22.13s
+     Running benches/before_after.rs (target/release/deps/before_after-004d93af05f1aaf8)
+Gnuplot not found, using plotters backend
+Benchmarking fib_comparison/before_slow_fib_20
+Benchmarking fib_comparison/before_slow_fib_20: Warming up for 3.0000 s
+Benchmarking fib_comparison/before_slow_fib_20: Collecting 10 samples in estimated 10.001 s (509k iterations)
+Benchmarking fib_comparison/before_slow_fib_20: Analyzing
+fib_comparison/before_slow_fib_20
+                        time:   [20.349 µs 21.454 µs 22.067 µs]
+Benchmarking fib_comparison/before_slow_fib_25
+Benchmarking fib_comparison/before_slow_fib_25: Warming up for 3.0000 s
+Benchmarking fib_comparison/before_slow_fib_25: Collecting 10 samples in estimated 10.009 s (47k iterations)
+Benchmarking fib_comparison/before_slow_fib_25: Analyzing
+fib_comparison/before_slow_fib_25
+                        time:   [217.04 µs 228.51 µs 239.84 µs]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+Benchmarking fib_comparison/after_fast_fib_20
+Benchmarking fib_comparison/after_fast_fib_20: Warming up for 3.0000 s
+Benchmarking fib_comparison/after_fast_fib_20: Collecting 10 samples in estimated 10.000 s (833M iterations)
+Benchmarking fib_comparison/after_fast_fib_20: Analyzing
+fib_comparison/after_fast_fib_20
+                        time:   [11.422 ns 11.722 ns 11.992 ns]
+Benchmarking fib_comparison/after_fast_fib_25
+Benchmarking fib_comparison/after_fast_fib_25: Warming up for 3.0000 s
+Benchmarking fib_comparison/after_fast_fib_25: Collecting 10 samples in estimated 10.000 s (716M iterations)
+Benchmarking fib_comparison/after_fast_fib_25: Analyzing
+fib_comparison/after_fast_fib_25
+                        time:   [13.386 ns 13.577 ns 13.762 ns]
+Benchmarking fib_comparison/after_fast_fib_32
+Benchmarking fib_comparison/after_fast_fib_32: Warming up for 3.0000 s
+Benchmarking fib_comparison/after_fast_fib_32: Collecting 10 samples in estimated 10.000 s (537M iterations)
+Benchmarking fib_comparison/after_fast_fib_32: Analyzing
+fib_comparison/after_fast_fib_32
+                        time:   [18.385 ns 18.568 ns 18.792 ns]
+
+Benchmarking dedup_comparison/before_slow_dedup/100
+Benchmarking dedup_comparison/before_slow_dedup/100: Warming up for 3.0000 s
+Benchmarking dedup_comparison/before_slow_dedup/100: Collecting 100 samples in estimated 5.0066 s (798k iterations)
+Benchmarking dedup_comparison/before_slow_dedup/100: Analyzing
+dedup_comparison/before_slow_dedup/100
+                        time:   [6.4848 µs 6.6988 µs 6.9342 µs]
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+Benchmarking dedup_comparison/after_optimized_dedup/100
+Benchmarking dedup_comparison/after_optimized_dedup/100: Warming up for 3.0000 s
+Benchmarking dedup_comparison/after_optimized_dedup/100: Collecting 100 samples in estimated 5.0000 s (2.2M iterations)
+Benchmarking dedup_comparison/after_optimized_dedup/100: Analyzing
+dedup_comparison/after_optimized_dedup/100
+                        time:   [2.1947 µs 2.2424 µs 2.2973 µs]
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high mild
+Benchmarking dedup_comparison/before_slow_dedup/500
+Benchmarking dedup_comparison/before_slow_dedup/500: Warming up for 3.0000 s
+Benchmarking dedup_comparison/before_slow_dedup/500: Collecting 100 samples in estimated 5.4164 s (45k iterations)
+Benchmarking dedup_comparison/before_slow_dedup/500: Analyzing
+dedup_comparison/before_slow_dedup/500
+                        time:   [120.90 µs 129.04 µs 138.62 µs]
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) high mild
+  4 (4.00%) high severe
+Benchmarking dedup_comparison/after_optimized_dedup/500
+Benchmarking dedup_comparison/after_optimized_dedup/500: Warming up for 3.0000 s
+Benchmarking dedup_comparison/after_optimized_dedup/500: Collecting 100 samples in estimated 5.0116 s (444k iterations)
+Benchmarking dedup_comparison/after_optimized_dedup/500: Analyzing
+dedup_comparison/after_optimized_dedup/500
+                        time:   [10.477 µs 10.652 µs 10.845 µs]
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+Benchmarking dedup_comparison/before_slow_dedup/1000
+Benchmarking dedup_comparison/before_slow_dedup/1000: Warming up for 3.0000 s
+Benchmarking dedup_comparison/before_slow_dedup/1000: Collecting 100 samples in estimated 6.8571 s (15k iterations)
+Benchmarking dedup_comparison/before_slow_dedup/1000: Analyzing
+dedup_comparison/before_slow_dedup/1000
+                        time:   [451.66 µs 460.52 µs 468.98 µs]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking dedup_comparison/after_optimized_dedup/1000
+Benchmarking dedup_comparison/after_optimized_dedup/1000: Warming up for 3.0000 s
+Benchmarking dedup_comparison/after_optimized_dedup/1000: Collecting 100 samples in estimated 5.0785 s (227k iterations)
+Benchmarking dedup_comparison/after_optimized_dedup/1000: Analyzing
+dedup_comparison/after_optimized_dedup/1000
+                        time:   [21.829 µs 22.126 µs 22.432 µs]
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking dedup_comparison/before_slow_dedup/2000
+Benchmarking dedup_comparison/before_slow_dedup/2000: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 9.0s, enable flat sampling, or reduce sample count to 50.
+Benchmarking dedup_comparison/before_slow_dedup/2000: Collecting 100 samples in estimated 9.0349 s (5050 iterations)
+Benchmarking dedup_comparison/before_slow_dedup/2000: Analyzing
+dedup_comparison/before_slow_dedup/2000
+                        time:   [1.8315 ms 1.8524 ms 1.8738 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low mild
+  3 (3.00%) high mild
+Benchmarking dedup_comparison/after_optimized_dedup/2000
+Benchmarking dedup_comparison/after_optimized_dedup/2000: Warming up for 3.0000 s
+Benchmarking dedup_comparison/after_optimized_dedup/2000: Collecting 100 samples in estimated 5.0284 s (111k iterations)
+Benchmarking dedup_comparison/after_optimized_dedup/2000: Analyzing
+dedup_comparison/after_optimized_dedup/2000
+                        time:   [42.410 µs 43.123 µs 43.887 µs]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+

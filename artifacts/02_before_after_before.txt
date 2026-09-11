@@ -1,0 +1,116 @@
+   Compiling parking_lot_core v0.9.12
+   Compiling futures-core v0.3.34
+   Compiling scopeguard v1.2.0
+   Compiling smallvec v1.16.1
+   Compiling futures-task v0.3.34
+   Compiling slab v0.4.12
+   Compiling pin-project-lite v0.2.17
+   Compiling serial_test_derive v3.5.0
+   Compiling log v0.4.34
+   Compiling lock_api v0.4.14
+   Compiling futures-util v0.3.34
+   Compiling parking_lot v0.12.5
+   Compiling futures-executor v0.3.34
+   Compiling serial_test v3.5.0
+   Compiling broken-app v0.1.0 (/home/hogintosh/Downloads/broken-app)
+warning[E0133]: dereference of raw pointer is unsafe and requires unsafe block
+  --> src/lib.rs:60:15
+   |
+60 |     let val = *raw;
+   |               ^^^^ dereference of raw pointer
+   |
+   = note: raw pointers may be null, dangling or unaligned; they can violate aliasing rules and cause data races: all of these are undefined behavior
+note: an unsafe function restricts its caller, but its body is safe by default
+  --> src/lib.rs:57:1
+   |
+57 | pub unsafe fn use_after_free() -> i32 {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+   = note: `#[warn(unsafe_op_in_unsafe_fn)]` (part of `#[warn(rust_2024_compatibility)]`) on by default
+
+warning[E0133]: call to unsafe function `std::boxed::Box::<T>::from_raw` is unsafe and requires unsafe block
+  --> src/lib.rs:61:10
+   |
+61 |     drop(Box::from_raw(raw));
+   |          ^^^^^^^^^^^^^^^^^^ call to unsafe function
+   |
+   = note: consult the function's documentation for information on how to avoid undefined behavior
+   = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+
+warning[E0133]: dereference of raw pointer is unsafe and requires unsafe block
+  --> src/lib.rs:62:11
+   |
+62 |     val + *raw
+   |           ^^^^ dereference of raw pointer
+   |
+   = note: raw pointers may be null, dangling or unaligned; they can violate aliasing rules and cause data races: all of these are undefined behavior
+   = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+
+For more information about this error, try `rustc --explain E0133`.
+warning: `broken-app` (lib) generated 3 warnings (run `cargo fix --lib -p broken-app` to apply 1 suggestion)
+    Finished `bench` profile [optimized] target(s) in 4.28s
+     Running benches/before_after.rs (target/release/deps/before_after-004d93af05f1aaf8)
+Gnuplot not found, using plotters backend
+Benchmarking fib_before/slow_fib_20
+Benchmarking fib_before/slow_fib_20: Warming up for 3.0000 s
+Benchmarking fib_before/slow_fib_20: Collecting 10 samples in estimated 10.000 s (486k iterations)
+Benchmarking fib_before/slow_fib_20: Analyzing
+fib_before/slow_fib_20  time:   [18.035 µs 18.638 µs 19.456 µs]
+Found 2 outliers among 10 measurements (20.00%)
+  1 (10.00%) high mild
+  1 (10.00%) high severe
+Benchmarking fib_before/slow_fib_25
+Benchmarking fib_before/slow_fib_25: Warming up for 3.0000 s
+Benchmarking fib_before/slow_fib_25: Collecting 10 samples in estimated 10.004 s (46k iterations)
+Benchmarking fib_before/slow_fib_25: Analyzing
+fib_before/slow_fib_25  time:   [200.43 µs 205.36 µs 215.24 µs]
+Benchmarking fib_before/slow_fib_30
+Benchmarking fib_before/slow_fib_30: Warming up for 3.0000 s
+Benchmarking fib_before/slow_fib_30: Collecting 10 samples in estimated 10.122 s (4345 iterations)
+Benchmarking fib_before/slow_fib_30: Analyzing
+fib_before/slow_fib_30  time:   [2.1631 ms 2.2242 ms 2.2887 ms]
+Found 2 outliers among 10 measurements (20.00%)
+  2 (20.00%) high mild
+
+Benchmarking dedup_before/slow_dedup/100
+Benchmarking dedup_before/slow_dedup/100: Warming up for 3.0000 s
+Benchmarking dedup_before/slow_dedup/100: Collecting 100 samples in estimated 5.0152 s (808k iterations)
+Benchmarking dedup_before/slow_dedup/100: Analyzing
+dedup_before/slow_dedup/100
+                        time:   [6.1174 µs 6.2543 µs 6.3971 µs]
+Found 5 outliers among 100 measurements (5.00%)
+  3 (3.00%) high mild
+  2 (2.00%) high severe
+Benchmarking dedup_before/slow_dedup/500
+Benchmarking dedup_before/slow_dedup/500: Warming up for 3.0000 s
+Benchmarking dedup_before/slow_dedup/500: Collecting 100 samples in estimated 5.5615 s (45k iterations)
+Benchmarking dedup_before/slow_dedup/500: Analyzing
+dedup_before/slow_dedup/500
+                        time:   [118.50 µs 120.16 µs 121.80 µs]
+Found 6 outliers among 100 measurements (6.00%)
+  1 (1.00%) low mild
+  3 (3.00%) high mild
+  2 (2.00%) high severe
+Benchmarking dedup_before/slow_dedup/1000
+Benchmarking dedup_before/slow_dedup/1000: Warming up for 3.0000 s
+Benchmarking dedup_before/slow_dedup/1000: Collecting 100 samples in estimated 7.1684 s (15k iterations)
+Benchmarking dedup_before/slow_dedup/1000: Analyzing
+dedup_before/slow_dedup/1000
+                        time:   [462.42 µs 469.91 µs 477.48 µs]
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) low mild
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking dedup_before/slow_dedup/2000
+Benchmarking dedup_before/slow_dedup/2000: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 9.3s, enable flat sampling, or reduce sample count to 50.
+Benchmarking dedup_before/slow_dedup/2000: Collecting 100 samples in estimated 9.3439 s (5050 iterations)
+Benchmarking dedup_before/slow_dedup/2000: Analyzing
+dedup_before/slow_dedup/2000
+                        time:   [1.8202 ms 1.8487 ms 1.8781 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+
